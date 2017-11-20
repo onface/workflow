@@ -92,6 +92,7 @@ view/                   # 调用模块代码和一些不需要封装的逻辑代
         - index.js      # 调用 m/swtich/index.js 提供的 swtich()
         - index.html    # 引入 m/btn/index.css 和使用 <span class="m-btn">确认</span>
         - logo.png
+        - index.css
 ```
 
 不命名为 `view/common` 而命名为 `view/pc` 是因为随着项目需求的变化，可能会出现 `view/mobile` 。
@@ -141,3 +142,5 @@ view
         - **.**
     login/    
 ```
+
+下一章：[构建](./build.md)
