@@ -22,7 +22,7 @@
 
 这时我们就要使用CSS预处理器来帮助我们解决这个问题。比如 [Less](http://less.bootcss.com/) [Sass](https://www.sass.hk/)。
 
-比如在 Less 中可以通过 `@import (less) "../m/btn/index.css";` 的方式引入 css 。
+比如在 Less 中可以通过 `@import (less) "../m/btn/index.css";` `@import "../m/btn/index.less";` 或 的方式引入 css 或 less 。
 
 ```less
 // view/login/index.less
