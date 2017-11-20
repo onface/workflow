@@ -50,7 +50,7 @@ function switchClass(element, target, className){
 }
 ```
 
-很多前端会将代码按文件类型分。
+很多项目的代码会根据文件类型的不同存放在不同的文件夹下
 
 ```
 css/
@@ -68,7 +68,7 @@ html/
     - index.html
 ```
 
-这种方式在项目越来越大之后会难以维护，**血的教训**。
+这种方式在页面越来越多时会难以维护，有时还需要在多个目录不停的切换。
 
 为了便于检索，我们可以将模块代码和视图代码分别放在 `m` 和 `view` 文件夹下。
 
@@ -76,29 +76,29 @@ html/
 
 ```shell
 m/
-  btn/
-  		- loading.png
-		- index.css
-        - README.html  # 编写 btn 的 html 示例
-  switchClass/
-  		- index.js
-        - README.html  # 编写 switchClass 的使用示例
-view/                  # 调用模块代码和一些不需要封装的逻辑代码
+    btn/
+        - loading.png
+        - index.css
+        - README.html   # 编写 btn 的 html 示例
+    switchClass/
+        - index.js
+        - README.html   # 编写 switchClass 的使用示例
+view/                   # 调用模块代码和一些不需要封装的逻辑代码
     pc/
-        - base.js      # 底层库(jQuery React Vue 等)
-        - index.js    # 公用界面代码（控制导航栏搜索展开，点击底部客服弹出窗口） — 单页应用则不需要 pc/index.js pc/index.css —
-        - index.css   # 存放 normalize.css 和少量公用样式，（不要使用 CSS Reset）
-	login/
-		- index.js	   # 调用 m/swtich/index.js 提供的 swtich()
-		- index.html   # 引入 m/btn/index.css 和使用 <span class="m-btn">确认</span>
-		- logo.png
+        - base.js       # 底层库(jQuery React Vue 等)
+        - index.js      # 公用界面代码（控制导航栏搜索展开，点击底部客服弹出窗口） — 单页应用则不需要 pc/index.js pc/index.css —
+        - index.css     # 存放 normalize.css 和少量公用样式，（不要使用 CSS Reset）
+    login/
+        - index.js      # 调用 m/swtich/index.js 提供的 swtich()
+        - index.html    # 引入 m/btn/index.css 和使用 <span class="m-btn">确认</span>
+        - logo.png
 ```
 
-不需要 `view/common` 只需要 `view/pc` 是因为随着项目需求的变化，可能会出现 `view/mobile` 。
+不命名为 `view/common` 而命名为 `view/pc` 是因为随着项目需求的变化，可能会出现 `view/mobile` 。
 
 不只是相关资源就近维护了，还增加了 `/m/btn/README.html` 和 `/m/switch/README.html` 文件。
 
-文件内容应该是：
+README.html 的文件内容是：
 
 ```html
 <!-- /m/btn/index.html -->
@@ -124,7 +124,6 @@ switchClass('.js-btn', '.js-text', 'light')
 
 **模块再小都要写示例，磨刀不误砍柴工。**
 
-
 ## 小结
 
 1. 资源就近维护
@@ -139,6 +138,6 @@ m/
 view
     pc/
         - base.js
-        - common.**
+        - **.**
     login/    
 ```
