@@ -87,11 +87,11 @@ body {
 }
 ```
 
-直接阅读源码会认为 body的各项单位设置的就是px
+直接阅读源码会认为 body的各项单位设置的就是px，会带来误导。而且 `/* @norem */` 的标记非常麻烦。
 
 **less function**
 
-rem 这种应该使用CSS预处理器的函数功能解决
+编译 rem 这种需求应该使用CSS预处理器的函数功能解决
 
 [less-rem](https://github.com/onface/less-rem)
 
@@ -136,13 +136,13 @@ rem 这种应该使用CSS预处理器的函数功能解决
 
 ## 构建工具的组合
 
-适合项目构建的 gulp fis webpack 虽然都可以单独使用。比如：
+gulp fis webpack 应该组合使用，因为：
 
 1. gulp 虽然有 [gulp-webpack](https://www.npmjs.com/package/gulp-webpack) 但是构建速度完全比不上**单独启动一个服务器加上 [webpack-hot-middleware](https://www.npmjs.com/package/webpack-hot-middleware)** 。
 2. fis3 虽然有 [fis3-parser-webpack](https://www.npmjs.com/package/fis3-parser-webpack) 但是做不到异步加载和热更新。
 3. webpack 虽然能[提取单独样式文件](https://github.com/onface/webpack-book/tree/gh-pages/6-extract-text) 但是不可能用它提取所有文件。还是需要 fis3 或者 gulp 构建非JS文件。
 
-那么就要选择 gulp 还是 fis3 作为构建工具。因为 [静态资源映射表](http://fis.baidu.com/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1) 的原因，作者选择 fis3。当然你也可以选择 gulp ，毕竟可以改造它们以满足自己的需求。**只是时间成本和技术成本都很高，对两个构建工具做详细了解后选择改动工作量最小的**。时间充裕的情况下多花点时间了解（磨刀不误砍柴工）。
+那么就要选择 gulp 还是 fis3 作为构建工具。因为 [静态资源映射表](http://fis.baidu.com/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1) 的原因，作者选择 fis3。当然你也可以选择 gulp ，毕竟可以改造它们以满足自己的需求。**只是时间成本和技术成本都很高，对两个构建工具做详细了解后选择改造工作量最小的**。时间充裕的情况下多花点时间了解（磨刀不误砍柴工）。
 
 
 ## markrun
