@@ -2,6 +2,8 @@
 
 上一章：[文件目录](./directory.md)
 
+---
+
 ## 为什么需要构建系统
 
 在上一章[文件目录](./directory.md)中的文件结构，存在一些未解决的问题。
@@ -176,3 +178,7 @@ gulp fis webpack 应该组合使用，因为：
 利用 markrun 配合构建系统就能在 `/m/**/README.md` 中 编写一份代码，生成的html中出现 `pre` 和 `script/style/html`
 
 单独列出 markrun 是因为提高了模块的文档编写速度开发人员就更愿意写文档，能在开发模块的同时完成简单的使用示例编写。
+
+---
+
+下一章：[技术选型](./technology-stack.md)

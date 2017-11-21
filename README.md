@@ -7,3 +7,4 @@
 
 1. [文件目录](./chapter/directory.md)
 2. [构建系统](./chapter/build.md)
+3. [技术选型](./chapter/technology-stack.md)
