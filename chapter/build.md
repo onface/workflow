@@ -146,6 +146,9 @@ gulp fis webpack 应该组合使用，因为：
 
 > 如果选择 fis3 注意：最终构建时候，先用fis3构建一遍所有文件，然后用webpack构建一遍js文件，都构建到同一个文件夹。然后再用fis3 构建一次生成文件指纹的文件（md5）。因为 js 交给 webpack 构建所以不能达到直接用fis3构建所有文件并加上文件指纹。
 
+## 参考
+
+[onface/react-project](https://github.com/onface/react-project) 是基于 react 技术栈的前端工程解决方案
 
 ## markrun
 
