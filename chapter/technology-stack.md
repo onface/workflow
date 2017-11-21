@@ -17,6 +17,8 @@
 
 预处理不像HTML模板引擎那样，不同的模板引擎有很大差异。CSS 预处理器选择最契合团队环境的就可以。*作者推荐less，原因是安装快*
 
+> 不推荐 CSS in JS解决样式冲突，推荐使用 [CSS modules](http://www.ruanyifeng.com/blog/2016/06/css_modules.html)
+
 ## CSS框架
 
 最为出名的CSS框架就是 Bootstrap，但是**项目中还是尽可能的不使用第三方CSS框架**。而是根据项目情况自主开发，或者沿用团队自主开发的框架。
