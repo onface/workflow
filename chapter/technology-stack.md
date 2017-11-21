@@ -63,7 +63,7 @@ ES6 指的是 [ECMAScript6](http://es6.ruanyifeng.com/) JavaScript 超集指的�
 这个也是**需要团队负责人根据项目业务场景和团队人员对框架的熟悉程度进行评估**。超集会增加团队学习成本、招聘成本和新人的培训成本，如果超集确实能提高开发效率和提高项目稳定性还是应该推行使用的。
 
 
-### 字体图标平台
+## 字体图标平台
 
 [iconfont](http://iconfont.cn/) [fontawesome](http://fontawesome.io/) 等平台都会提供一些字体图标，建议团队使用 [iconfont](http://iconfont.cn/) 由设计师创建和维护图标项目的内容。由前端维护图标的 class 和尺寸的调整。
 
