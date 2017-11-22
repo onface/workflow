@@ -10,6 +10,6 @@
 2. [构建系统](./chapter/build.md)
 3. [技术选型](./chapter/technology-stack.md)
 4. ~[数据模拟](./chapter/mock.md)~
-5. ~[流程规范](./chapter/spec-flow.md)~
+5. [流程规范](./chapter/flow-spec.md)
 6. ~[通用代码](./chapter/base-code.md)~
 7. ~[组件生态](./chapter/components.md)~
