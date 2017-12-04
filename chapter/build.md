@@ -144,9 +144,13 @@ gulp fis webpack 应该组合使用，因为：
 2. fis3 虽然有 [fis3-parser-webpack](https://www.npmjs.com/package/fis3-parser-webpack) 但是做不到异步加载和热更新。
 3. webpack 虽然能[提取单独样式文件](https://github.com/onface/webpack-book/tree/gh-pages/6-extract-text) 但是不可能用它提取所有文件。还是需要 fis3 或者 gulp 构建非JS文件。
 
-那么就要选择 gulp 还是 fis3 作为构建工具。因为 [静态资源映射表](http://fis.baidu.com/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1) 的原因，作者选择 fis3。当然你也可以选择 gulp ，毕竟可以改造它们以满足自己的需求。**只是时间成本和技术成本都很高，对两个构建工具做详细了解后选择改造工作量最小的**。时间充裕的情况下多花点时间了解（磨刀不误砍柴工）。
+> 所以 `gulp-webpack` `fis3-parser-webpack` `webpack提取单独样式文件` 都不要用。
 
-> 如果选择 fis3 注意：最终构建时候，先用fis3构建一遍所有文件，然后用webpack构建一遍js文件，都构建到同一个文件夹。然后再用fis3 构建一次生成文件指纹的文件（md5）。因为 js 交给 webpack 构建所以不能达到直接用fis3构建所有文件并加上文件指纹。
+那么就要选择 gulp 或 fis3 作为构建工具。因为 [静态资源映射表](http://fis.baidu.com/fis3/docs/lv3.html#%E5%9F%BA%E4%BA%8E%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1) 的原因，作者选择 fis3。当然你也可以选择 gulp ，毕竟可以改造它们以满足自己的需求。**只是时间成本和技术成本都很高，对两个构建工具做详细了解后选择改造工作量最小的**。时间充裕的情况下多花点时间了解（磨刀不误砍柴工）。
+
+本地开发阶段：非 js 文件用 gulp fis3 构建，js文件使用 `webpack-dev-middleware` 和 `webpack-hot-middleware` 构建。因为 `webpack-dev-middleware` 速度非常快。
+
+> 如果选择 fis3 注意：最终构建时，先用fis3构建一遍所有文件，然后用webpack构建一遍js文件，都构建到同一个文件夹。然后再用fis3 构建一次生成文件指纹的文件（md5）。因为 js 交给 webpack 构建所以不能达到直接用fis3构建所有文件并加上文件指纹。
 
 ## 参考
 
